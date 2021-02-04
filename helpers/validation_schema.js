@@ -5,6 +5,11 @@ const authSchema = Joi.object({
     password: Joi.string().min(6).required()
 })
 
+const documentSchema = Joi.object({
+    judul: Joi.string().required(),
+    aktif: Joi.boolean().required()
+})
+
 module.exports = {
-    authSchema
+    authSchema, documentSchema
 }
